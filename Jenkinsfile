@@ -1,9 +1,9 @@
 #!/usr/bin/env groovy
 
 pipeline{
-    agent any
-    //can specify a specific agent where we want the pipeline to run if we want to
-    //can specify the labels if we want to
+     agent {
+        docker { image 'node:7-alpine' }
+    }
     
     stages{
         stage('Installing Tools'){
