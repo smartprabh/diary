@@ -8,8 +8,11 @@ pipeline{
     stages{
         stage('Installing Tools'){
             steps{
-                echo'Install Bundler'
-                sh 'bundle install'
+               #!/bin/bash -xe
+                export RAILS_ENV=test
+                bundle install --deployment --path vendor/bundle
+                bundle exec rake db:migrate
+                bundle exec rspec spec --order random --fail-fast
             }
         }
 
