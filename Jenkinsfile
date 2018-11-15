@@ -1,11 +1,7 @@
 #!/usr/bin/env groovy
 
 pipeline{
-    agents {
-        kubernetes{
-            // are we gonna write node as an agent or pod as an agent???
-        }
-    }
+    agent any
     //can specify a specific agent where we want the pipeline to run if we want to
     //can specify the labels if we want to
     
