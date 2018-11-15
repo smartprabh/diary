@@ -8,15 +8,12 @@ pipeline{
     }
     //can specify a specific agent where we want the pipeline to run if we want to
     //can specify the labels if we want to
-    tools{
-        rake "version"
-        bundler "version"
-
-    }
+    
     stages{
-        stage('Checkout SCM'){
+        stage('Installing Tools'){
             steps{
-                echo'Checking out SCM'
+                echo'Install Bundler'
+                sh 'bundle install'
             }
         }
 
