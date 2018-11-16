@@ -7,7 +7,7 @@ pipeline{
         stage('Installing Tools'){
             steps{
                 echo 'install tools'
-                 sh "docker-compose up"
+                 sh "docker-compose build"
             }
         }
 
