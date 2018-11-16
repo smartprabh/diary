@@ -7,7 +7,7 @@ pipeline{
         stage('Installing Tools'){
             steps{
                 echo 'install tools'
-                 sh "ruby -v"
+                 sh "gem install rails"
             }
         }
 
