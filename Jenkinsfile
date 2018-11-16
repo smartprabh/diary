@@ -1,14 +1,13 @@
 #!/usr/bin/env groovy
 
 pipeline{
-     agent {
-        docker { image 'node:7-alpine' }
-    }
+     agent any
     
     stages{
         stage('Installing Tools'){
             steps{
                 echo 'install tools'
+                 sh ls
             }
         }
 
