@@ -7,7 +7,7 @@ pipeline{
         stage('Installing Tools'){
             steps{
                 echo 'install tools'
-                 sh "docker-compose build"
+                 sh "bundle exec rake"
             }
         }
 
