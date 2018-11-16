@@ -1,11 +1,12 @@
 # README
+This application is a small version of your personal diary. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Features:
+* Write dialy journal
+* Record your behavioural statistics
+* Generate weekly and monthly reports
 
-Things you may want to cover:
-
-* Ruby version
+ ---- UNDER CONSTRUCTION -----
 
 * System dependencies
 
@@ -21,4 +22,3 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
