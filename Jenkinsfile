@@ -7,7 +7,7 @@ pipeline{
         stage('Installing Tools'){
             steps{
                 echo 'install tools'
-                 sh "bundle exec rake"
+                 sh "ls -la"
             }
         }
 
