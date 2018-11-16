@@ -7,7 +7,7 @@ pipeline{
         stage('Installing Tools'){
             steps{
                 echo 'install tools'
-                 sh "gem install rails"
+                 sh "gem install rails bundler"
             }
         }
 
