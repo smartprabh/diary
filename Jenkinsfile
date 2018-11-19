@@ -31,12 +31,7 @@ pipeline{
 
         stage('Deploy'){
             steps{
-                input{
-                         message "Press Ok to continue"
-                          parameters {
-                              string(name:'username', defaultValue: 'user', description: 'Username of the user pressing Ok')
-                                   }
-}
+                    echo'This is Deploy step'
             }
         }
     }
