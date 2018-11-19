@@ -6,33 +6,53 @@ pipeline{
     stages{
         stage('Installing Tools'){
             steps{
-                echo 'install tools'
-                 sh "gem install bundler"
-                 sh "bundle install"
+               
+                 //create docker machine by using the docker file ..all tools are included 
+            }
+             step{
+                  //Install inventory .. addition libraries 
+             }
+        }
+
+        stage('Install Keycode application'){
+            steps{
+                 //Download the source
+             
+            }
+             
+             step{
+               // Application setup
+                  // bundle install etc.
+             }
+             
+            /* step{
+               //database setup
+                  //database migrations
+                  //DIFFERENT PIPELINE FOR DATABASE
+                  Install database server.. create  database user..look into additional steps for maria db... (different Dockerfile)
+                  //DIFFERENT PIPELINE FOR NGNIX
+                  What image to use, what dockerfile to use..copy ngnix configuration for that machine
+                   
+             }   */ 
+             
+             
+        }
+
+        stage('Run Application'){
+            steps{
+                //Start the application by starting the server. RUN 
             }
         }
 
-        stage('Prepration'){
+        stage('Testing the application'){
             steps{
-                echo'This is Prepration step'
-            }
-        }
-
-        stage('Build'){
-            steps{
-                echo'This is Build step'
-            }
-        }
-
-        stage('Test'){
-            steps{
-                echo'This is Test step'
+                //Runing tests
             }
         }
 
         stage('Deploy'){
             steps{
-                    echo'This is Deploy step'
+                 //moving running docker image to kubernetes
             }
         }
     }
