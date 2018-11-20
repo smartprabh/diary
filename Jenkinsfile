@@ -33,7 +33,7 @@ pipeline{
                   What image to use, what dockerfile to use..copy ngnix configuration for that machine
                    
              }   */   
-        }
+       
 
         stage('Run Application'){
             steps{
