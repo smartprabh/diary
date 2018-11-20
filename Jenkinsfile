@@ -2,7 +2,7 @@
 
 pipeline{
   
-        agent any
+       agent { dockerfile true }
     
     
     stages{
@@ -19,7 +19,7 @@ pipeline{
             steps{
                 echo "Something"
                  //1) Download the source from Github repository
-               checkout scm 
+               //checkout scm 
               //2) Application setup
                   // bundle install etc.
             }
