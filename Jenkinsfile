@@ -1,7 +1,9 @@
 #!/usr/bin/env groovy
 
 pipeline{
-     agent any
+     agent {
+         docker{ image 'myruby'}
+     }
     
     stages{
         stage('Installing Tools'){
@@ -10,15 +12,16 @@ pipeline{
                  //create docker machine by using the docker file ..all tools are included 
             }
              step{
-                  //Install inventory .. addition libraries 
+                  /*Install inventory(additional libraries required)
+                    No need to do this step now. It is for future purposes. 
+                  */
              }
         }
 
         stage('Install Keycode application'){
             steps{
-                 //Download the source
-                 checkout scm
-             
+                 //Download the source from Github repository
+                checkout scm 
             }
              
              step{
@@ -42,6 +45,7 @@ pipeline{
         stage('Run Application'){
             steps{
                 //Start the application by starting the server. RUN 
+        
             }
         }
 
