@@ -7,27 +7,22 @@ pipeline{
     
     stages{
         stage('Installing Tools'){
-            step{
+            steps{
                
-                 //create docker machine by using the docker file ..all tools are included 
-            }
-             step{
-                  /*Install inventory(additional libraries required)
-                    No need to do this step now. It is for future purposes. 
+                 //1) create docker machine by using the docker file ..all tools are included 
+               /*Install inventory(additional libraries required)
+                    2)No need to do this step now. It is for future purposes. 
                   */
-             }
         }
 
         stage('Install Keycode application'){
-            step{
-                 //Download the source from Github repository
+            steps{
+                 //1) Download the source from Github repository
                // checkout scm 
+              //2) Application setup
+                  // bundle install etc.
             }
              
-             step{
-               // Application setup
-                  // bundle install etc.
-             }
              
             /* step{
                //database setup
@@ -37,26 +32,24 @@ pipeline{
                   //DIFFERENT PIPELINE FOR NGNIX
                   What image to use, what dockerfile to use..copy ngnix configuration for that machine
                    
-             }   */ 
-             
-             
+             }   */   
         }
 
         stage('Run Application'){
-            step{
+            steps{
                 //Start the application by starting the server. RUN 
         
             }
         }
 
         stage('Testing the application'){
-            step{
+            steps{
                 //Runing tests
             }
         }
 
         stage('Deploy'){
-            step{
+            steps{
                  //moving running docker image to kubernetes
             }
         }
