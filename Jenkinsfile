@@ -7,7 +7,7 @@ pipeline{
     
     stages{
         stage('Installing Tools'){
-            steps{
+            step{
                
                  //create docker machine by using the docker file ..all tools are included 
             }
@@ -19,7 +19,7 @@ pipeline{
         }
 
         stage('Install Keycode application'){
-            steps{
+            step{
                  //Download the source from Github repository
                // checkout scm 
             }
@@ -43,20 +43,20 @@ pipeline{
         }
 
         stage('Run Application'){
-            steps{
+            step{
                 //Start the application by starting the server. RUN 
         
             }
         }
 
         stage('Testing the application'){
-            steps{
+            step{
                 //Runing tests
             }
         }
 
         stage('Deploy'){
-            steps{
+            step{
                  //moving running docker image to kubernetes
             }
         }
