@@ -46,12 +46,14 @@ pipeline{
 
         stage('Testing the application'){
             steps{
+                echo "Something"
                 //Runing tests
             }
         }
 
         stage('Deploy'){
             steps{
+                echo "Something"
                  //moving running docker image to kubernetes
             }
         }
