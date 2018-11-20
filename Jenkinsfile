@@ -2,7 +2,7 @@
 
 pipeline{
   
-         agent { label 'my-defined-label' }
+        agent { dockerfile true }
     
     
     stages{
