@@ -21,7 +21,7 @@ pipeline{
         stage('Install Keycode application'){
             steps{
                  //Download the source from Github repository
-                checkout scm 
+               // checkout scm 
             }
              
              step{
