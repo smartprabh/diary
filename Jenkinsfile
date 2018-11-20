@@ -1,9 +1,9 @@
 #!/usr/bin/env groovy
 
 pipeline{
-     agent {
-         docker{ image 'myruby'}
-     }
+  
+         agent { label 'my-defined-label' }
+    
     
     stages{
         stage('Installing Tools'){
