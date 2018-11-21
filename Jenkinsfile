@@ -9,7 +9,7 @@ pipeline{
         stage('Installing Tools'){
             steps{
                echo "Something"
-                sh 'docker build -it containers-wbs.pmp.only.sap/wkc'
+                
                  //1) create docker machine by using the docker file ..all tools are included 
                /*Install inventory(additional libraries required)
                     2)No need to do this step now. It is for future purposes. 
@@ -19,6 +19,7 @@ pipeline{
         stage('Install Keycode application'){
             steps{
                 echo "Something"
+              sh 'docker run -it containers-wbs.pmp.only.sap/wkc'
                  //1) Download the source from Github repository
                //checkout scm 
               //2) Application setup
