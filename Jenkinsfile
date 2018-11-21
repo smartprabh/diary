@@ -19,8 +19,7 @@ pipeline{
         stage('Install Keycode application'){
             steps{
                 echo "Something"
-              sh 'docker images'
-              sh 'docker ps'
+              sh 'docker run -it rails'
                  //1) Download the source from Github repository
                //checkout scm 
               //2) Application setup
