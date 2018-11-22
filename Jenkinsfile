@@ -21,7 +21,6 @@ pipeline{
             steps{
                 echo "Something"
               sh 'docker build -t demo .'
-sh 'docker run -it --rm demo bundle exec rake test'
 sh 'docker run -itP demo'
                  //1) Download the source from Github repository
                //checkout scm 
