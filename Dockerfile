@@ -1,4 +1,4 @@
-FROM ruby:2.2 
+FROM ruby:2.2.6
 MAINTAINER marko@codeship.com
 
 # Install apt based dependencies required to run Rails as 
