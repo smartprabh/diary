@@ -23,8 +23,8 @@ pipeline{
         }
         stage('Install Keycode application'){
             steps{
-                echo "docker images"
-                sh 'docker build -t containers-wbs.pmp.only.sap/wkc .'
+                sh 'docker images'
+                sh 'docker run -t containers-wbs.pmp.only.sap/wkc'
              
            
                  //1) Download the source from Github repository
