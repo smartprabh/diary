@@ -25,7 +25,7 @@ pipeline{
             steps{
               
                // sh 'git clone https://github.com/smartprabh/diary.git'
-                sh 'docker build --tag testbuild .'
+              //  sh 'docker build --tag testbuild .'
                 sh 'docker images'
                 //sh 'docker run -t containers-wbs.pmp.only.sap/wkc'
              
@@ -54,6 +54,7 @@ pipeline{
 
         stage('Run Application'){
             steps{
+              sh 'docker run -t testbuild'
                 echo "Something"
                 //Start the application by starting the server. RUN 
               //[By Run, do we mean expose?]
