@@ -57,7 +57,7 @@ pipeline{
               sh 'docker run -t testbuild'
                 echo "Something"
                 //Start the application by starting the server. RUN 
-              //[By Run, do we mean expose?]
+              //[By Run, do we mean expose? at the end of running the image it says * Listening on tcp://0.0.0.0:3000 Use Ctrl-C to stop]
         
             }
         }
