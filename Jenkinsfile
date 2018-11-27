@@ -14,15 +14,18 @@ pipeline{
                  //1) create docker machine by using the docker file ..all tools are included 
                /*Install inventory(additional libraries required)
                     2)No need to do this step now. It is for future purposes. 
+                    
+                    [Docker already installed using Dockerfile, Show the dockerfile]
                   */
+              
+              
         }
         }
         stage('Install Keycode application'){
             steps{
                 echo "Something"
               sh 'docker build -t demo .'
-              sh 'docker run --rm demo bundle exec rake test'
-              sh 'docker run -itP demo'
+              sh 'docker ps'
            
                  //1) Download the source from Github repository
                //checkout scm 
