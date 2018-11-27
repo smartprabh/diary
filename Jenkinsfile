@@ -23,7 +23,7 @@ pipeline{
         }
         stage('Install Keycode application'){
             steps{
-                echo "Something"
+                echo "docker images"
                 sh 'docker build -t containers-wbs.pmp.only.sap/wkc .'
              
            
