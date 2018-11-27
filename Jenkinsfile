@@ -23,14 +23,21 @@ pipeline{
         }
         stage('Install Keycode application'){
             steps{
+              
+                sh 'git clone https://github.com/smartprabh/diary.git'
+                sh 'ls '
                 sh 'docker images'
-                sh 'docker run -t containers-wbs.pmp.only.sap/wkc'
+                //sh 'docker run -t containers-wbs.pmp.only.sap/wkc'
              
            
                  //1) Download the source from Github repository
                //checkout scm 
               //2) Application setup
                   // bundle install etc.
+              
+              //[Build stucks at the end, how do we expose it or what is the next step? ]
+              
+              
             }
         }
              
@@ -49,6 +56,7 @@ pipeline{
             steps{
                 echo "Something"
                 //Start the application by starting the server. RUN 
+              //[By Run, do we mean expose?]
         
             }
         }
@@ -57,6 +65,7 @@ pipeline{
             steps{
                 echo "Something"
                 //Runing tests
+              //[How do we run the tests?]
             }
         }
 
@@ -64,6 +73,7 @@ pipeline{
             steps{
                 echo "Something"
                  //moving running docker image to kubernetes
+                 // [How do we move the image to kubernetes] 
             }
         }
     }
