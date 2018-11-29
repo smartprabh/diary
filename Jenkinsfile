@@ -54,6 +54,7 @@ pipeline{
 
         stage('Run Application'){
             steps{
+               sh 'bundler -v'
               sh 'docker run -t testbuild'
                 echo "Something"
                 //Start the application by starting the server. RUN 
