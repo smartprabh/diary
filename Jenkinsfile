@@ -66,7 +66,6 @@ pipeline{
         stage('Testing the application'){
             steps{
                 echo "Tesing"
-                sh 'bundler -v'
                 //Runing tests
               //[How do we run the tests?]
             }
