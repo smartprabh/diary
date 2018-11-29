@@ -27,7 +27,7 @@ pipeline{
                // sh 'git clone https://github.com/smartprabh/diary.git'
               //  sh 'docker build --tag testbuild .'
                 sh 'docker images'
-                //sh 'docker run -t containers-wbs.pmp.only.sap/wkc'
+                sh 'docker run -t containers-wbs.pmp.only.sap/wkc'
              
            
                  //1) Download the source from Github repository
