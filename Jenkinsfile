@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('Installing Tools'){
             steps{
-                
+                echo "something"
 
                    }
               }
@@ -36,7 +36,7 @@ pipeline{
 
         stage('Testing the application'){
             steps{
-                
+                 echo "something"
             }
         }
 
